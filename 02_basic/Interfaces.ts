@@ -1,4 +1,4 @@
-
+// Nothing just like type 
 interface User1{
     email:string,
     userId:number,
@@ -20,3 +20,29 @@ const hitesh :User1={
     return 10
    }
 }
+
+
+
+
+// Type vs Interface
+         // interface extends  
+         // type adds 
+
+interface Animal {
+    name:string
+}
+
+
+
+// type bear =Animal &{
+//     power:number
+// }
+interface Bear extends Animal{
+    power:number
+}
+
+
+const gorrila=Bear()
+gorrila.name="d"
+gorrila.power=4
+
