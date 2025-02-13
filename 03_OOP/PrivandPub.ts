@@ -8,6 +8,7 @@ class Myuser{
     }
 }
 // Preffered approch for industry
+
 class MyuserIndustrylevel{
     // public email:string
     // private name:string
@@ -16,6 +17,7 @@ class MyuserIndustrylevel{
         
     }
 }
+
 const murtaza= new Myuser("murtaza@","mmm")
 
 
@@ -23,6 +25,7 @@ const murtaza= new Myuser("murtaza@","mmm")
 
 class course {
     private cteacher:string
+    protected courseclass:string
     
     constructor(public cname:string,public cid :number){
     }
