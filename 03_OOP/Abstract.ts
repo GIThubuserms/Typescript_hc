@@ -1,3 +1,5 @@
+// abstract vs interface 
+
 abstract class Takephoto{
     constructor(
         public cameramode:string,
@@ -32,3 +34,7 @@ class Instagram extends Takephoto{
 
 const myinsta=new Instagram("blur","specia",6)
 myinsta.changecameramode()
+myinsta.changefilter()
+
+
+
