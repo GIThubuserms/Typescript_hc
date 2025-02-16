@@ -26,7 +26,8 @@ const getproducts5=<T>(num:T[]):T=>{
 }
 
 // For whole array index
-
-const getproducts6=<T>(num:Array<T>):Array<T>=>{
+//                  ! just for generic not jsx
+const getproducts6=<T,>(num:Array<T>):Array<T>=>{
     return num
 }
+
