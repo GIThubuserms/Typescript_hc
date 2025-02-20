@@ -1,3 +1,5 @@
+// How to run   tsc -w
+
 const myname:string="Murtaza"
 console.log(myname);
 
@@ -88,3 +90,65 @@ const func2=(...m:number[]):number[]=>{
 
 
 // Day 2 ended with 55 mins
+
+
+class player{
+
+    constructor(private height:number,private weight:number){
+        this.height=height,
+        this.weight=weight
+    }
+
+    get getplayerheight():number{
+        return this.height
+    }
+
+    set setplayerheight(hght:number){
+        this.height=hght
+    }
+}
+
+const player1=new player(5.9,60)
+console.log(player1.getplayerheight)
+player1.setplayerheight=6.1
+console.log(player1.getplayerheight)
+
+
+ // Interface and classes
+
+interface product{
+    name:string,
+    price:number,
+    amount:number,
+    id?:number
+}
+
+class apple1 implements product {
+    name:string
+    price:number
+    amount:number
+    id?:number
+
+    constructor( nm:string, ps:number, amt:number, id:number) {
+       this.name=nm,
+       this.price=ps,
+       this.amount=amt,
+       this.id=id
+    }
+}
+
+class apple2 {
+    // name:string
+    // price:number
+    // amount:number
+    // id?:number
+
+    constructor(public nm:string,public ps:number,public amt:number,public id:number) {
+       this.nm=nm,
+       this.ps=ps,
+       this.amt=amt,
+       this.id=id
+    }
+}
+
+// Day 2 ended with 1:40 mins

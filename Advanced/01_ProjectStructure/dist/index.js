@@ -1,4 +1,5 @@
 "use strict";
+// How to run   tsc -w
 const myname = "Murtaza";
 console.log(myname);
 // console.log("Helloworld");
@@ -30,3 +31,46 @@ const func2 = (...m) => {
     return m;
 };
 // Day 2 ended with 55 mins
+class player {
+    constructor(height, weight) {
+        this.height = height;
+        this.weight = weight;
+        this.height = height,
+            this.weight = weight;
+    }
+    get getplayerheight() {
+        return this.height;
+    }
+    set setplayerheight(hght) {
+        this.height = hght;
+    }
+}
+const player1 = new player(5.9, 60);
+console.log(player1.getplayerheight);
+player1.setplayerheight = 6.1;
+console.log(player1.getplayerheight);
+class apple1 {
+    constructor(nm, ps, amt, id) {
+        this.name = nm,
+            this.price = ps,
+            this.amount = amt,
+            this.id = id;
+    }
+}
+class apple2 {
+    // name:string
+    // price:number
+    // amount:number
+    // id?:number
+    constructor(nm, ps, amt, id) {
+        this.nm = nm;
+        this.ps = ps;
+        this.amt = amt;
+        this.id = id;
+        this.nm = nm,
+            this.ps = ps,
+            this.amt = amt,
+            this.id = id;
+    }
+}
+// Day 2 ended with 1:40 mins
