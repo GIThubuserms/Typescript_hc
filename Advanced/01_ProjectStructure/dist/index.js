@@ -74,3 +74,22 @@ class apple2 {
     }
 }
 // Day 2 ended with 1:40 mins
+// Type assertion
+const myp = document.getElementById('myp');
+console.log(myp);
+console.log(typeof (myp));
+const per1 = {
+    name: "M",
+};
+const getname = (nm) => {
+    return per1[nm];
+};
+console.log(getname("name"));
+// console.log(getname("nme"));
+// Utility Types
+// partial required   
+// Generics
+const getsame = (n) => {
+    return n;
+};
+// DAY 4 ends on 2:31
