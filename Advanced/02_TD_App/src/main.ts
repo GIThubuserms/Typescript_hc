@@ -18,27 +18,32 @@ myform.onsubmit=(e:SubmitEvent)=>{
   name:input.value,
   id:String(Math.random()*1000)
   }
-  
-  generateTodo(newTodo)
- console.log(todos);
- 
-}
-
-
-const deleteTodo=()=>{
-
-}
-
-const generateTodo=(newTodo:Todo):void=>{
-  mycontainer.innerText=""
   todos.push(newTodo)
+ generateTodo()
+ console.log(todos);
+ input.value=""
+}
+
+
+const deleteTodo=(id:string)=>{
+   todos=todos.filter((i)=>i.id!==id)
+   generateTodo()
+}
+
+const generateTodo=():void=>{
+  mycontainer.innerText=""
+ 
   todos.forEach((td)=>{
-   const tdinput=document.createElement('div')
+  const tdinput=document.createElement('div')
   const tddelte=document.createElement('button')
   tdinput.innerText=td.name
   tddelte.innerText='X'
   tddelte.id=td.id
+  tddelte.onclick=()=>{
+  deleteTodo(td.id)
+  }
   mycontainer.appendChild(tdinput)
   mycontainer.appendChild(tddelte)
   })
+
 }
