@@ -6,6 +6,8 @@
 //   )
 // }
 
+import { Dispatch, SetStateAction } from "react";
+
 // import { ReactNode } from "react";
 
 // type prototype = {
@@ -41,17 +43,17 @@
 type myform = {
   label: string;
   button: string;
-  onclck: () => void;
-  mytype:"email"|"text"
+  onclck:Dispatch<SetStateAction<string>>;
+  mytype:string
 }
 
 function Box({ label, button, onclck,mytype="email" }: myform) {
   return (
     <>
-      <form>
+      <form >
         <label>{label}</label>
         <input type={mytype} name="" id="" />
-        <button onClick={onclck}>{button}</button>
+        <button onClick={()=>onclck("6")}>{button}</button>
       </form>
     </>
   );

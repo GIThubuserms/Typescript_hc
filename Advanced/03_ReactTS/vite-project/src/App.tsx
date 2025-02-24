@@ -1,7 +1,16 @@
-import Box from "../components/Box";
+import State from '../components/State.jsx';
 
 function App() {
+//  const [val,setval]=useState<string>('')
+//  console.log(val);
+ 
 
+const myData= {
+  namefeild:"password",
+  agefeild:"text",
+};
+
+// ✅ Pass an object, not an interface
 
   return (
     <div>
@@ -9,12 +18,15 @@ function App() {
        {"Hellooo Buddy i am children"}
        <button>Click me </button>
       </Box> */}
-      <Box 
+
+      {/* <Box 
       label="Hello Type something" 
-      mytype="email"
+       mytype="email"
        button="onclick" 
-       onclck={() => window.open("https://www.murtazadev.site","_blank")}
-       />
+       onclck={setval}
+       /> */}
+      <State mytypes={myData} />
+       
     </div>
   );
 }
